@@ -669,7 +669,6 @@ bool field::process(Processors::Recover& arg) {
 			pduel->lua->add_param<LuaParam::INT>(val);
 			pduel->lua->add_param<LuaParam::INT>(reason);
 			pduel->lua->add_param<LuaParam::INT>(reason_player);
-			luaDebug(pduel, "Test: %s", "Za Hando");
 			val = static_cast<uint32_t>(peff->get_value(4));
 			returns.set<uint32_t>(0, val);
 			if (val == 0) {
