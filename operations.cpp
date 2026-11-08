@@ -3175,6 +3175,8 @@ bool field::process(Processors::SpSummonRule& arg) {
 			matreason = REASON_XYZ;
 		else if(proc->value == SUMMON_TYPE_LINK)
 			matreason = REASON_LINK;
+		else if (proc->value == SUMMON_TYPE_TRICK)
+			matreason = REASON_TRICK;
 		if (target->material_cards.size()) {
 			for (auto& mcard : target->material_cards)
 				raise_single_event(mcard, nullptr, EVENT_BE_PRE_MATERIAL, proc, matreason, sumplayer, sumplayer, 0);
@@ -3247,6 +3249,8 @@ bool field::process(Processors::SpSummonRule& arg) {
 			matreason = REASON_XYZ;
 		else if(proc->value == SUMMON_TYPE_LINK)
 			matreason = REASON_LINK;
+		else if (proc->value == SUMMON_TYPE_TRICK)
+			matreason = REASON_TRICK;
 		if(target->material_cards.size()) {
 			for(auto& mcard : target->material_cards)
 				raise_single_event(mcard, nullptr, EVENT_BE_MATERIAL, proc, matreason, sumplayer, sumplayer, 0);

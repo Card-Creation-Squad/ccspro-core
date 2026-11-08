@@ -1270,9 +1270,11 @@ uint8_t field::get_pzone_index(uint8_t seq, uint8_t p) const {
 	return seq * 4;					 // 0 and 4
 }
 uint32_t field::get_extra_deck_types() const {
-	if(is_flag(DUEL_EXTRA_DECK_RITUAL))
-		return TYPE_FUSION | TYPE_SYNCHRO | TYPE_XYZ | TYPE_LINK | TYPE_RITUAL;
-	return TYPE_FUSION | TYPE_SYNCHRO | TYPE_XYZ | TYPE_LINK;
+	uint32_t retTypes = TYPE_FUSION | TYPE_SYNCHRO | TYPE_XYZ | TYPE_LINK | TYPE_TRICK;
+	if (is_flag(DUEL_EXTRA_DECK_RITUAL)) {
+		retTypes |= TYPE_RITUAL;
+	}
+	return retTypes;
 }
 void field::add_effect(effect* peffect, uint8_t owner_player) {
 	if (!peffect->handler) {

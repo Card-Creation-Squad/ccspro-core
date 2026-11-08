@@ -315,6 +315,9 @@ LUA_STATIC_FUNCTION(XyzSummon) {
 LUA_STATIC_FUNCTION(LinkSummon) {
 	return spsummon_rule(L, SUMMON_TYPE_LINK, 0);
 }
+LUA_STATIC_FUNCTION(TrickSummon) {
+	return spsummon_rule(L, SUMMON_TYPE_TRICK, 0);
+}
 LUA_STATIC_FUNCTION(ProcedureSummon) {
 	check_param_count(L, 3);
 	auto sumtype = lua_get<uint32_t>(L, 3);

@@ -1418,6 +1418,9 @@ LUA_STATIC_FUNCTION(IsXyzSummonable) {
 LUA_STATIC_FUNCTION(IsLinkSummonable) {
 	return spsummonable_rule(L, TYPE_LINK, SUMMON_TYPE_LINK, 0);
 }
+LUA_STATIC_FUNCTION(IsTrickSummonable) {
+	return spsummonable_rule(L, TYPE_TRICK, SUMMON_TYPE_TRICK, 0);
+}
 LUA_STATIC_FUNCTION(IsProcedureSummonable) {
 	check_param_count(L, 3);
 	auto cardtype = lua_get<uint32_t, true>(L, 2);
