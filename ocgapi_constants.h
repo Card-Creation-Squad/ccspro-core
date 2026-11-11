@@ -56,12 +56,9 @@
 #define TYPE_PENDULUM    0x1000000
 #define TYPE_SPSUMMON    0x2000000
 #define TYPE_LINK        0x4000000
-<<<<<<< Updated upstream
-=======
 #define TYPE_SKILL       0x8000000
 #define TYPE_ACTION      0x10000000
 #define TYPE_TRICK       0x20000000
->>>>>>> Stashed changes
 
 /* Attributes */
 #define ATTRIBUTE_EARTH  0x01
