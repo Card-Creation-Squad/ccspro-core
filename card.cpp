@@ -936,8 +936,6 @@ uint32_t card::get_rank() {
 	auto search = assume.find(ASSUME_RANK);
 	if(search != assume.end())
 		return search->second;
-	if(!(current.location & LOCATION_MZONE))
-		return data.level;
 	if (has_valid_property_val(temp.rank))
 		return temp.rank;
 	effect_set effects;
